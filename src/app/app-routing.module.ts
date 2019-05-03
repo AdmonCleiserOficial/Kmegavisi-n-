@@ -8,6 +8,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AuthGuard } from 'src/servicios/auth.guard';
 import { ProteccionComponent } from './proteccion/proteccion.component';
 import { PostComponent } from './post/post.component';
+import { TestimoniosComponent } from './testimonios/testimonios.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: "plataforma", component: DashboardComponent, data: { state: "login" },canActivate:[AuthGuard]},
   {path: "admin", component: AdminComponent, data: { state: "login" }},
   {path: "proteccion", component: ProteccionComponent, data: { state: "login" }},
+  {path: "testimonios", component:TestimoniosComponent, data: { state: "login" }},
   {path: "post", component: PostComponent, data: { state: "login" }, canActivate:[AuthGuard]},
   {path: "prueba", component: TesteoComponent}
 ];
