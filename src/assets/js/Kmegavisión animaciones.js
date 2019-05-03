@@ -25,11 +25,11 @@ Jerarquía matematica
 */
 
 
- var uno=200 ;
+/*  var uno=200 ;
  var dos=100 ;
  var tres=uno*dos;
  var cuatro=tres*uno;
  cuatro++;
 
  document.write(cuatro);
- 
+  */
