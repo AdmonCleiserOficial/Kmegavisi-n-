@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 body{
     background-color: rgb(235, 238, 231);
   }
+
+
 
 
    .iconosTamaño{
@@ -19,7 +21,7 @@ body{
 
   h1{
     font-family: Helvetica;
-    font-size: 60px;
+    font-size: 45px;
     color:green;
     text-align: center;
   }
@@ -35,13 +37,13 @@ body{
     font-family: Arial;
     font-size: 15px;
     color:green;
-    
+
   }
 
   p{
 
     text-align: justify;
-    
+
   }
 
   h6{
