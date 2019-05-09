@@ -331,3 +331,12 @@ h1{
   text-shadow: 2px 2px 8px  #ffffff;
 
 }
+
+footer{
+  text-align: center;
+  background-color:#96db967a;
+  padding: 30px 100px;
+  transition: width 2s, height 2s;
+
+
+}
