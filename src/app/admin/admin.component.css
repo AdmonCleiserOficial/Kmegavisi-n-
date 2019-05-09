@@ -1,19 +1,30 @@
 
 /* BASIC */
 
-html {
+/*html {
     background-color: #56baed;
     background-image: url('/assets/Imagenes/sea.jpg');
+    background-size: 100vh 100vh;
+    margin: 0;
+    font-family: Helvetica;
     
-  }
+    text-align: center;
+    
+  }*/
   
   body {
-    font-family: "Poppins", sans-serif;
-    height: 100vh;
     
-  
+
+      width: 55%;
+      height: 25%;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 10%;
+      background-image: center;
+   
    
   }
+  
 
   .fondo{
     background-image: url('/assets/Imagenes/sea.jpg');
@@ -334,9 +345,9 @@ h1{
 
 footer{
   text-align: center;
-  background-color:#96db967a;
+  background-color:#cfcccc7a;
   padding: 30px 100px;
-  transition: width 2s, height 2s;
+  
 
 
 }
