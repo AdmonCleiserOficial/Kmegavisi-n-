@@ -30,9 +30,10 @@ import { ProteccionComponent } from './proteccion/proteccion.component';
 import { PostComponent } from './post/post.component';
 import { HeaderComponent } from './header/header.component';
 import { SafePipe } from 'src/pipes/seguro';
+import { TestimoniosComponent } from './testimonios/testimonios.component';
 
 @NgModule({
-  declarations: [AppComponent, FormularioComponent, DashboardComponent, HomeComponent, TesteoComponent, AdminComponent, ProteccionComponent, PostComponent, HeaderComponent, SafePipe],
+  declarations: [AppComponent, FormularioComponent, DashboardComponent, HomeComponent, TesteoComponent, AdminComponent, ProteccionComponent, PostComponent, HeaderComponent, SafePipe, TestimoniosComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

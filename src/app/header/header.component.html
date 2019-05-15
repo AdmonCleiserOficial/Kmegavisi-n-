@@ -1,60 +1,25 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-success">
-  <a class="navbar-brand"
-    [routerLink]="['/home']"
-    ><img
-      src="assets/Imagenes/San rafael.jpg"
-      class="rounded-circle "
-      alt="Hecgo por Enrique"
-      width="50"
-      height="50"
-    />Kmegavisión</a
-  >
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
+  <a class="navbar-brand" [routerLink]="['/home']"><img src="assets/Imagenes/San rafael.jpg" class="rounded-circle "
+      alt="Hecho por Enrique" width="50" height="50" />Kmegavisión</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <button
-          mat-button
-          (click)="openDialog()"
-          type="btn button"
-          class="btn btn-light"
-
-
-        >
+        <button mat-button (click)="openDialog()" type="btn button" class="btn btn-light">
           Agenda Tú Cita
         </button>
       </li>
 
       <li class="nav-item active">
-        <a
-          target="_blank"
-          class="nav-link"
-          href="http://127.0.0.1:5500/Galer%C3%ADa%20Kmegavisi%C3%B3n.html"
-          >Testimonios<span class="sr-only">(current)</span></a
-        >
+        <a class="nav-link" [routerLink]="['/testimonios']">Tips De Salud<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown active">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdown"
-          
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
           Tratamientos
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -70,40 +35,19 @@
         </div>
       </li>
       <li class="nav-item active">
-        <a
-          [routerLink]="['/home']"
-          class="nav-link "
-          > Home</a
-        >
+        <a [routerLink]="['/home']" class="nav-link "></a>
       </li>
       <li class="nav-item active">
-        <a
-          target="_blank"
-          class="nav-link "
-          href="https://api.whatsapp.com/send?phone=573123814330"
-          >Ir al WhatsApp</a
-        >
+        <a target="_blank" class="nav-link " href="https://api.whatsapp.com/send?phone=573123814330">Ir al WhatsApp</a>
       </li>
       <li class="nav-item active">
-        <a
-          class="nav-link "
-          [routerLink]="['/plataforma']"
-          >Ir al Plataforma</a
-        >
+        <a class="nav-link " [routerLink]="['/plataforma']">Ir al Plataforma</a>
       </li>
       <li class="nav-item active">
-        <a
-          class="nav-link "
-          [routerLink]="['/admin']"
-          >Login</a
-        >
+        <a class="nav-link " [routerLink]="['/admin']">Login</a>
       </li>
       <li class="nav-item active">
-        <a
-          class="nav-link "
-          [routerLink]="['/prueba']"
-          >Posts</a
-        >
+        <a class="nav-link " [routerLink]="['/prueba']"></a>
       </li>
     </ul>
   </div>
