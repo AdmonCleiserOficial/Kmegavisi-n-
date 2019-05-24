@@ -25,13 +25,13 @@ export class DashboardComponent implements OnInit {
   clonObjetoCliente: any;
   displayDialog: boolean = false;
   detallesHeader="Detalles del cliente";
-  //loader Elegante para que aparezca mientras se despierta el servidor perrito
+  //loader Elegante para que aparezca mientras se despierta el servidor recibe la petición
   // wuaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
   loadingElegante: boolean;
   // Para eso se usan los booleanos true y false, true es corra animacion
   // False es apague animacion
  
-  // wuaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  // 
   // wuaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
   // toda la data de los clientes
   clientes: any;

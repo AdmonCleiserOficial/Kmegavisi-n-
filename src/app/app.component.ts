@@ -3,11 +3,13 @@ import { ConeccionService } from "src/servicios/coneccion.service";
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from "@angular/material";
 import { FormularioComponent } from './formulario/formulario.component';
 import { Overlay } from '@angular/cdk/overlay';
+import { routerTransition } from './estoEsAspero';
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  styleUrls: ["./app.component.css"],
+  animations:[routerTransition]
 })
 export class AppComponent {
   title = "Kmegavisión";

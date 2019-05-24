@@ -1,59 +1,32 @@
 <!-- LA TABLA -->
 
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-success">
-    <a class="navbar-brand"
-      [routerLink]="['/home']"
-      ><img
-        src="assets/Imagenes/San rafael.jpg"
-        class="rounded-circle "
-        alt="Hecgo por Cristian"
-        width="50"
-        height="50"
-      />Kmegavisión</a
-    >
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
+    <a class="navbar-brand" [routerLink]="['/home']"><img src="assets/Imagenes/San rafael.jpg" class="rounded-circle "
+            alt="Hecgo por Cristian" width="50" height="50" />Kmegavisión</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
-  
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">     
-  
-     
-     
-        <li class="nav-item active">
-          <a
-            [routerLink]="['/home']"
-            class="nav-link "
-            > Home</a
-          >
-        </li>
- 
-        <li class="nav-item active">
-          <a
-            class="nav-link "
-            [routerLink]="['/plataforma']"
-            >Admin</a
-          >
-        </li>
-        <li class="nav-item active">
-          <a
-            class="nav-link "
-            [routerLink]="['/post']"
-            >Post Blog</a
-          >
-        </li>
-      </ul>
+        <ul class="navbar-nav mr-auto">
+
+
+
+            <li class="nav-item active">
+                <a [routerLink]="['/home']" class="nav-link "> Home</a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link " [routerLink]="['/plataforma']">Admin</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link " [routerLink]="['/post']">Post Blog</a>
+            </li>
+        </ul>
     </div>
-  </nav>
-  <!-- fin menu -->
+</nav>
+<!-- fin menu -->
 <br>
 <br>
 <br>
@@ -191,20 +164,21 @@
 <!-- fin de tabla -->
 <!-- comience modal para agregar clientes -->
 <div *ngIf="clonObjetoCliente">
-        <p-dialog [header]="'detalles del cliente '+clonObjetoCliente.nombre " [(visible)]="displayDialog" [responsive]="false" showEffect="shake" [modal]="true"
-        [style]="{width: '60%'}" [dismissableMask]="true" baseZIndex=9999999 [maximizable]="true">
+    <p-dialog [header]="'detalles del cliente '+clonObjetoCliente.nombre " [(visible)]="displayDialog"
+        [responsive]="false" showEffect="shake" [modal]="true" [style]="{width: '60%'}" [dismissableMask]="true"
+        baseZIndex=9999999 [maximizable]="true">
         <div class="ui-g ui-fluid" *ngIf="clonObjetoCliente">
             <div class="ui-g-12 border">
                 <p class="text-center"><b>{{clonObjetoCliente.nombre}}</b></p>
             </div>
-    
+
             <div class="ui-g-12 border">
                 <div class="ui-g-4">
                     <label for="celular">telefono</label>
                 </div>
                 <div class="ui-g-4">
                     <p class="text-center"><b>{{clonObjetoCliente.telefono}}</b></p>
-    
+
                 </div>
             </div>
             <div class="ui-g-12 border">
@@ -213,7 +187,7 @@
                 </div>
                 <div class="ui-g-4">
                     <p class="text-center"><b>{{clonObjetoCliente.tratamiento}}</b></p>
-    
+
                 </div>
             </div>
             <div class="ui-g-12 border">
@@ -222,7 +196,7 @@
                 </div>
                 <div class="ui-g-4">
                     <p class="text-center"><b>{{clonObjetoCliente.correo}}</b></p>
-    
+
                 </div>
             </div>
             <div class="ui-g-12 border">
@@ -231,7 +205,7 @@
                 </div>
                 <div class="ui-g-4">
                     <p class="text-center"><b>{{clonObjetoCliente.date | date}}</b></p>
-    
+
                 </div>
             </div>
             <div class="ui-g-12 border">
@@ -240,19 +214,19 @@
                 </div>
                 <div class="ui-g-4">
                     <p class="text-center"><b>{{clonObjetoCliente.mensaje}}</b></p>
-    
+
                 </div>
             </div>
-    
+
         </div>
-    
-    
-    
-    
+
+
+
+
     </p-dialog>
 
 
 </div>
 <div class="w-100 border border-primary d-flex justify-content-center">
-        <button class="btn btn-dark w-50 mx-auto animated bounceInUp delay-1s" (click)="salgase($event)">SALIR</button>
-      </div>
+    <button class="btn btn-dark w-50 mx-auto animated bounceInUp delay-1s" (click)="salgase($event)">SALIR</button>
+</div>

@@ -66,10 +66,33 @@
     <form (ngSubmit)="usuarioMetioDatos()" class="animated fadeInDownBig">
       <h2>Mi Tablero</h2>
       <input class="animated bounceIn delay-1s" type="text" name="titulo" [(ngModel)]="titulo" placeholder="Titulo del articulo">
-      <input class="animated bounceIn delay-1s" type="img/jpg" name="imagen" [(ngModel)]="imagen" placeholder="coloca la imagen aqui">
+      <input 
+        #imageInput
+        type="file"
+        (change)="onFileSelected(imageInput)"
+        class="btn btn-outline-dark animated bounceIn delay-1s"
+        placeholder="coloca la imagen aqui"
+        style="background:white; color: black"
+        >
       <input class="animated bounceIn delay-1s" type="stylesheet" name="video" [(ngModel)]="video"   placeholder="Coloca el link del video">
       <textarea class="animated bounceIn delay-1s" name="Articulo" name="articulo" [(ngModel)]="articulo" placeholder="Escribe aqui tu Articulo" rows="8"></textarea>
       <input class="animated tada delay-1s" type="submit" value="PUBLICAR" id="boton">
     </form>
-    
+    <div *ngIf="idFoto" class="animated fadeIn mx-auto imagenCuadre">
+        <cl-image [public-id]="idFoto" class="thumbnail inline"  format="jpg">
+            <cl-transformation height="50" width="50" ></cl-transformation>
+            <cl-transformation gravity="north" y="20"></cl-transformation>
+         </cl-image>
+    </div>
+ 
+    <div  style="background-color:antiquewhite">
+        <h1 class="text-dark">Validadores</h1>
+      <h1
+      class="text-center"
+      style="font-weight:bolder; color:black;text-shadow: 4px 4px 10px white"
+      >{{validador}}</h1>
+      
+     
+
+    </div>
 </div>

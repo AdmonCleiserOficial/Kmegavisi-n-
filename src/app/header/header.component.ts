@@ -2,7 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { Overlay } from '@angular/cdk/overlay';
 import { FormularioComponent } from '../formulario/formulario.component';
-
+// import * from 'jquery';
+// import * as $ from "jquery";
+declare var jQuery:any;
+declare var $:any;
+// declare const
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -14,6 +18,8 @@ export class HeaderComponent implements OnInit {
     private overlay: Overlay) { }
 
   openDialog(): void {
+
+    $('.navbar-toggler').click(); 
 
     const dialogRef = this.dialog.open(FormularioComponent,{
 
@@ -27,6 +33,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
+   
   }
 
 }

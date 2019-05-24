@@ -31,12 +31,17 @@ import { PostComponent } from './post/post.component';
 import { HeaderComponent } from './header/header.component';
 import { SafePipe } from 'src/pipes/seguro';
 import { TestimoniosComponent } from './testimonios/testimonios.component';
+import { CloudinaryModule, CloudinaryConfiguration } from '@cloudinary/angular-5.x';
+import { Cloudinary } from 'cloudinary-core';
+
 
 @NgModule({
   declarations: [AppComponent, FormularioComponent, DashboardComponent, HomeComponent, TesteoComponent, AdminComponent, ProteccionComponent, PostComponent, HeaderComponent, SafePipe, TestimoniosComponent],
   imports: [
+    CloudinaryModule.forRoot({Cloudinary}, { cloud_name: 'just-me' } as CloudinaryConfiguration),
     BrowserModule,
     AppRoutingModule,
+    
     FormsModule,
     HttpClientModule,
     MatDialogModule,

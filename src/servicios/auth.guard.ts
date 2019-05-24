@@ -14,8 +14,9 @@ export class AuthGuard implements CanActivate {
   ) { }
 
   canActivate(): boolean {
+    
     if (!this.comunicacionService.isAuthenticated()) {
-      this.Router.navigate(['proteccion']);
+      this.Router.navigate(['proteccion']);     
       return false;
     } else if (this.comunicacionService.isAuthenticated()) {
       setTimeout(() => {

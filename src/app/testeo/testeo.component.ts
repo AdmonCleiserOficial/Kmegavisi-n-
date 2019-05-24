@@ -1,7 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  TemplateRef,
+  OnDestroy
+} from "@angular/core";
 import { ConeccionService } from 'src/servicios/coneccion.service';
 import Swal from 'sweetalert2';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ngxLoadingAnimationTypes, NgxLoadingComponent } from "ngx-loading";
 
 interface Servidor {
   success: boolean;
@@ -49,6 +56,32 @@ alt=""
   public PublicacionesAdministrador: any;
   public iframe: any;
   public arregloVacio = [];
+  // efecto LOADING
+  @ViewChild("ngxLoading") ngxLoadingComponent: NgxLoadingComponent;
+  @ViewChild("customLoadingTemplate") customLoadingTemplate: TemplateRef<any>;
+  public ngxLoadingAnimationTypes = ngxLoadingAnimationTypes;
+  public primaryColour = "rgb(42, 206, 42)";
+  public secondaryColour = "rgb(247, 64, 8)";
+  public coloursEnabled = false;
+  public loadingTemplate: TemplateRef<any>;
+  public fullscreenloadingdecision = true;
+  public radio = "20px";
+  public colorback = "#000000d2";
+
+  public config = {
+    animationType: ngxLoadingAnimationTypes.none,
+    primaryColour: this.primaryColour,
+    secondaryColour: this.secondaryColour,
+    tertiaryColour: this.primaryColour,
+    backdropBorderRadius: this.radio,
+    fullScreenBackdrop: this.fullscreenloadingdecision,
+    backdropBackgroundColour: this.colorback
+  };
+
+  // FIN EFECTO LOADING
+
+  // LOADER BOOLEANO
+  public loading = false;
 constructor(
     private comunique: ConeccionService,
     private sanitazer: DomSanitizer
@@ -64,25 +97,32 @@ constructor(
 
     this.comunique.obtengaBlog()
     .subscribe((x:Servidor)=>{
+      this.loading=true;
 
-      if (x){
-        if (x.success){
-
-          Swal.fire({
-            position: 'top-end',
-            type: 'success',
-            title: 'Cargado con exito de la base de datos',
-            showConfirmButton: false,
-            timer: 1500
-          })
-          this.PublicacionesAdministrador = x.articulos;
-          console.log(`Mirando que me llega del servidor sii`);
-          console.log(this.PublicacionesAdministrador);
-
-          
+      setTimeout(() => {
+        
+        if (x){
+          console.log( 'que carajos llega del servidor' );
+          console.log(x);
+          if (x.success){
+            this.loading=false;
+            
+            Swal.fire({
+              position: 'top-end',
+              type: 'success',
+              title: 'Cargado con exito de la base de datos',
+              showConfirmButton: false,
+              timer: 1500
+            })
+            this.PublicacionesAdministrador = x.articulos;
+            console.log(`Mirando que me llega del servidor sii`);
+            console.log(this.PublicacionesAdministrador);
+  
+            
+          }
+  
         }
-
-      }
+      }, 2000);
     });
   }
 

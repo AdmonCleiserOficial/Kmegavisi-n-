@@ -69,7 +69,16 @@ export class ConeccionService {
     return this.comunique.get(this.miservidor+"Irule")
     .pipe(catchError(this.handleError("I rule ")));
   }
-  enviePostBlog(blog){
+  //@desc  enviar la imagen al servidor
+  //@as    ya no la usare
+  enviarMedia(media:File){    
+   const Archivo =  new FormData();
+   Archivo.append('image',media);
+    return this.comunique.post(this.miservidor+"media",Archivo)
+    .pipe(catchError(this.handleError("media")));
+  }
+  //@desc  Envio todo el modelo Blog
+  enviePostBlog(blog){    
     return this.comunique.post(this.miservidor+"blog",blog,httpoptions)
     .pipe(catchError(this.handleError("enviePostBlog")));
   }
@@ -81,6 +90,17 @@ export class ConeccionService {
   getcaptionNigga (){
     return this.comunique.get(this.miservidor+"getCaption")
     .pipe(catchError(this.handleError("getcaptionNigga")));
+  }
+  
+  dskfnhdsjf(){
+    return this.comunique.get(this.miservidor+"copyright")
+    .pipe(catchError(this.handleError("dskfnhdsjf")));
+
+  }
+  dskfjbh(){
+    return this.comunique.get(this.miservidor+"resetqueries")
+    .pipe(catchError(this.handleError("dskfjbh")));
+
   }
 
 
