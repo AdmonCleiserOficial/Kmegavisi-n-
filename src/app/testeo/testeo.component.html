@@ -3,6 +3,7 @@
 <br>
 <br>
 <br>
+<<<<<<< HEAD
 
 <!-- DISEÑO ENRIQUE START -->
 <div *ngIf="PublicacionesAdministrador; else loggedOut" class="container-fluid">
@@ -25,6 +26,44 @@
       <b>
         {{item.date | date:'medium'}}
       </b>
+=======
+<br>
+<!-- AQUI VAN LOS POST VISIBLES -->
+<h1>PRUEBA POSasdasdMN</h1>
+
+<div *ngIf="PublicacionesAdministrador; else loggedOut">
+        <p>mostrando publicaciones</p>
+        
+<div *ngFor="let item of PublicacionesAdministrador; let i = index">
+        <h1>{{item.titulo}}</h1>
+        <p>fecha de la publicacion</p> <br>
+        <b>{{item.date | date}}</b>
+        <br><br>
+        <div class="alert alert-success">
+            <b class="text-center"> Articulo Escrito</b> <br>
+    
+        </div>
+        <div class="card mx-auto" style="width: 18rem;">
+                <img [src]="item.imagen" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{item.titulo}}</h5>
+                  <p class="card-text">{{item.articulo}}</p>
+                  <a href="#" class="btn btn-primary"></a>
+                </div>
+              </div>
+              <h1>link del video {{item.video}}</h1>
+              <iframe
+               width="560" 
+               height="315" 
+               [src]="item.video" 
+               frameborder="0" 
+              
+               allowfullscreen></iframe>
+             
+       
+    
+    
+>>>>>>> 5e90806c724a6a87c861f60c7bc468afc2911062
     </div>
     <!-- termina un contador de mi objeto json que me llega del servidor -->
   </div><!-- fin de contador -->
